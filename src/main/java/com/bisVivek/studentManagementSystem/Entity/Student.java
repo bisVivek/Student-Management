@@ -1,22 +1,28 @@
 package com.bisVivek.studentManagementSystem.Entity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;  // Correct import for JPA
 
-import javax.annotation.processing.Generated;
-
+@Entity
 public class Student {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generate primary key
     private Long id;
 
+    private String name;
+    private int age;
+
+    // Constructor
     public Student(Long id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
     }
 
+    // Getters and Setters (Encapsulation)
     public Long getId() {
         return id;
     }
@@ -24,11 +30,6 @@ public class Student {
     public void setId(Long id) {
         this.id = id;
     }
-
-    private String name;
-    private int age;
-
-
 
     public String getName() {
         return name;
