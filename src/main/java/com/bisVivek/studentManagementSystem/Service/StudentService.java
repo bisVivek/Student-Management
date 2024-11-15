@@ -1,6 +1,7 @@
 package com.bisVivek.studentManagementSystem.Service;
 
 import com.bisVivek.studentManagementSystem.Entity.Student;
+import com.bisVivek.studentManagementSystem.Entity.Teacher;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

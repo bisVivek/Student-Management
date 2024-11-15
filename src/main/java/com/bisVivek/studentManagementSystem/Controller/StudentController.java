@@ -14,12 +14,14 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    //Add student
     @PostMapping
     public String addStudent(@RequestBody Student student){
         studentService.addStudent(student);
         return "Student added successfully!";
     }
 
+    //Get all students
     @GetMapping
     public List<Student>getAllStudents(){
         return studentService.getAllStudents();
